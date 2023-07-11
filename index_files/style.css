@@ -1,0 +1,601 @@
+/*CSS Shivana */
+/*--------------------------------------*/
+/*Específicos*/
+/*--------------------------------------*/
+html, body {
+	margin: 0px 0px 0px 0px;
+  	font-style: normal;
+  	font-weight: 400;
+	width:100%;
+	height:100%;
+}
+/*--------------------------------------*/
+/*Estilos header y menú*/
+/*--------------------------------------*/
+.dCabe
+{
+	position:fixed;
+	width:100%;
+	top:0px;
+	left:0px;
+	z-index:50;
+	height: auto;
+}
+.dmenu
+{
+	font-size:15px;
+	text-align:center;
+	border-bottom: 3px solid rgba(241,82,36,0);
+	box-sizing: border-box;
+	padding-top: 15px;
+}
+.dmenu:hover
+{
+	border-bottom: 2px solid rgba(249,241,232,1);
+	color:rgba(249,241,232,1);
+}
+.dmenu:hover .dsubmen_1, .dmenu:hover .dsubmen_2 
+{
+	height: 360px !important;
+	-moz-opacity: 1;
+	opacity:1;
+	filter: alpha(opacity=100);
+}
+.dsubmen
+{
+	padding:5px 0;
+	font-size:15px;
+	text-align:left;
+	color:rgba(255,255,255,1);
+}
+.dsubmen:hover
+{
+	color:rgba(249,241,232,1);
+}
+.dsubmen_1
+{
+	position: absolute;
+	top:66px;
+	left: 0px;
+	width: 100%;
+	overflow: hidden;
+	-moz-opacity: 0;
+	opacity:0;
+	filter: alpha(opacity=0);
+}
+.dsubmen_2
+{
+	-moz-opacity: 0;
+	opacity:0;
+	filter: alpha(opacity=0);
+}
+.dmenu_sel
+{
+	border-bottom: 2px solid rgba(249,241,232,1);
+	color:rgba(249,241,232,1);
+}
+/*--------------------------------------*/
+/*Estilos Banner*/
+/*--------------------------------------*/
+.dback_1
+{
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size:cover;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+.dback_2
+{
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover cover;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+/*--------------------------------------*/
+/*Imagenes al 50% centradas*
+/*--------------------------------------*/
+.dimg50 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.dimg50 img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.dimg50 img.portrait {
+  width: 100%;
+  height: auto;
+}
+.dimg50:hover img.ampim
+{
+	height:120%;
+}
+.dimg50:hover img.ampim_1
+{
+	width:120%;
+}
+/*---------------------------*/
+/*Fondo*/
+/*---------------------------*/
+.bgcol_1
+{
+	background-color: rgba(172,162,154,1);/*gris oscuro*/
+}
+.bgcol_1_1
+{
+	background-color: rgba(172,162,154,.8);
+}
+.bgcol_2
+{
+	background-color: rgba(54,18,21,1);/*Café oscuro*/
+}
+.bgcol_2_1
+{
+	background-color: rgba(54,18,21,.8);
+}
+.bgcol_2_2
+{
+	background-color: rgba(54,18,21,.6);
+}
+.bgcol_3
+{
+	background-color: rgba(255,255,255,1);
+}
+.bgcol_4
+{
+	background-color: rgba(238,227,197,1);/*Beige*/
+}
+.bgcol_4_1
+{
+	background-color: rgba(238,227,197,.8);
+}
+/*---------------------------*/
+/*Delineados*/
+/*---------------------------*/
+.dlin_1
+{
+	border-bottom: 2px solid rgba(54,18,21,1);
+}
+.dlin_1_1
+{
+	border-top: 2px solid rgba(54,18,21,1);
+}
+.dlin_1_2
+{
+	border: 2px solid rgba(54,18,21,1);
+}
+.dlin_2
+{
+	border: 1px solid rgba(215,111,21,1);
+}
+.dlin_3
+{
+	border-bottom: 1px solid rgba(255,255,255,1);
+}
+/*----------------------------------*/
+/*Rotaciones*/
+/*----------------------------------*/
+
+/*---------------------------------*/
+/*Redondeos*/
+/*---------------------------------*/
+.drod_1
+{
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.drod_2
+{
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	border-radius: 200px;
+}
+.drod_3
+{
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+/*---------------------------------*/
+/*Sombras*/
+/*---------------------------------*/
+.dsom_1
+{
+	text-shadow: 2px 2px 20px rgba(238,227,197,1);
+}
+/*---------------------------------*/
+/*Flotantes*/
+/*---------------------------------*/
+.flt_1
+{
+	float:left;
+}
+.flt_2
+{
+	float:right;
+}
+.flt_3
+{
+	display:inline-block;
+}
+.clearfx
+{
+	clear:both;
+}
+/*---------------------------------*/
+/*Paddings*/
+/*---------------------------------*/
+.pad_1{
+	padding: 10px 0;
+}
+.pad_15{
+	padding: 15px 0;
+}
+.pad_2{
+	padding: 20px 0;
+}
+.pad_3{
+	padding: 30px 0;
+}
+.pad_4{
+	padding: 40px 0;
+}
+.pad_5{
+	padding: 50px 0;
+}
+/*---------------------------------*/
+/*Opacidades*/
+/*---------------------------------*/
+.opaci_1{
+	-moz-opacity: 1;
+	opacity:1;
+	filter: alpha(opacity=100);
+}
+.opaci_1_1:hover{
+	-moz-opacity: 0;
+	opacity:0;
+	filter: alpha(opacity=0);
+}
+.opaci_2{
+	-moz-opacity: 0;
+	opacity:0;
+	filter: alpha(opacity=00);
+}
+.opaci_2_1:hover{
+	-moz-opacity: 0.7;
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+/*---------------------------------*/
+/*Transiciones*/
+/*---------------------------------*/
+.dsition_1{
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-o-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.dsition_2{
+	-webkit-transition: color 0.4s ease-in-out 0s;
+	-moz-transition: color 0.4s ease-in-out 0s;
+	-o-transition: color 0.4s ease-in-out 0s;
+	-ms-transition: color 0.4s ease-in-out 0s;
+	transition: color 0.4s ease-in-out 0s;
+}
+.dsition_3{
+	-webkit-transition: left 0.6s ease-in-out 0s;
+	-moz-transition: left 0.6s ease-in-out 0s;
+	-o-transition: left 0.6s ease-in-out 0s;
+	-ms-transition: left 0.6s ease-in-out 0s;
+	transition: left 0.6s ease-in-out 0s;
+}
+.dsition_4{
+	-webkit-transition: opacity 0.4s ease-in-out 0s;
+	-moz-transition: opacity 0.4s ease-in-out 0s;
+	-o-transition: opacity 0.4s ease-in-out 0s;
+	-ms-transition: opacity 0.4s ease-in-out 0s;
+	transition: opacity 0.4s ease-in-out 0s;
+}
+/*---------------------------------*/
+/*Transparencias*/
+/*---------------------------------*/
+
+/*---------------------------------*/
+/*Fuentes*/
+/*---------------------------------*/
+@font-face {
+	font-family: rtittle;
+    src: url('../fonts/OpenSans-CondLight-webfont.eot');
+    src: url('../fonts/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-CondLight-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-CondLight-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-CondLight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: btittle;
+    src: url('../fonts/OpenSans-CondBold-webfont.eot');
+    src: url('../fonts/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-CondBold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-CondBold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-CondBold-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: icons;
+  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: regular;
+	src: url('../fonts/Spinnaker-Regular.eot');
+	src: local('☺'), url('../fonts/Spinnaker-Regular.woff') format('woff'), url('../fonts/Spinnaker-Regular.ttf') format('truetype'), url('../fonts/Spinnaker-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Shivana;
+	src: url('../fonts/tempus.eot');
+	src: local('☺'), url('../fonts/tempus.woff') format('woff'), url('../fonts/tempus.ttf') format('truetype'), url('../fonts/tempus.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.fcont_t1
+{
+	font-family: rtittle;
+	color:rgba(255,255,255,1);
+}
+.fcont_t2
+{
+	font-family: rtittle;
+	color:rgba(104,59,17,1);
+}
+.fcont_t3
+{
+	font-family: rtittle;
+	color:rgba(215,111,21,1);
+}
+.fcont_tb1
+{
+	font-family: btittle;
+	color:rgba(104,59,17,1);
+}
+.fcont_tb2
+{
+	font-family: btittle;
+	color:rgba(215,111,21,1);
+}
+.fcont_r1
+{
+	font-family: regular;
+	color:rgba(54,18,21,1);
+}
+.fcont_s1
+{
+	font-family: Shivana;
+	color:rgba(54,18,21,1);
+}
+.fcont_s2
+{
+	font-family: Shivana;
+	color:rgba(152,179,134,1);
+}
+.fcont_s3
+{
+	font-family: Shivana;
+	color:rgba(174,149,180,1);
+}
+.fcont_s4
+{
+	font-family: Shivana;
+	color:rgba(0,219,255,1);
+}
+.fcont_s5
+{
+	font-family: Shivana;
+	color:rgba(242,145,0,1);
+}
+.fcont_s6
+{
+	font-family: Shivana;
+	color:rgba(174,140,113,1);
+}
+.fcont_s7
+{
+	font-family: Shivana;
+	color:rgba(255,255,255,1);
+}
+.txupper
+{
+	text-transform:uppercase;
+}
+.fcont_a:hover {
+    color: rgba(238,227,197,1);
+}
+.fcont_a_2:hover {
+    color: rgba(255,255,255,1);
+}
+.fcont_a3:hover {
+    color: rgba(238,227,197,1);/*242,145,0,2*/
+}
+.fcont_a4:hover{
+	color: rgba(104,59,17,.6);
+}
+a
+{
+	text-decoration:none;
+	color:inherit;
+}
+a:visited
+{
+	text-decoration:none
+}
+a:hover
+{
+	text-decoration:none;
+}
+h1, h2, h3, h4, h5, h6 { font-style: normal; text-decoration:none; font-weight:normal; margin:0px; padding:0px}
+/*---------------------------------*/
+/*Iconos*/
+/*---------------------------------*/
+.fcont_i1
+{
+	color:rgba(255,255,255,1);
+}
+.fcont_i2
+{
+	color:rgba(54,18,21,1);
+}
+.fcont_i2_1
+{
+	color:rgba(54,18,21,1);
+}
+.fcont_i2:hover
+{
+	color:rgba(255,255,255,1);
+}
+.fcont_i3:hover
+{
+	color:rgba(238,227,197,1);
+}
+.fcont_face:before
+{
+	font-family:icons;
+	content:"\f09a";
+}
+.fcont_goog:before
+{
+	font-family:icons;
+	content:"\f0d5";
+}
+.fcont_twi:before
+{
+	font-family:icons;
+	content:"\f099";
+}
+.fcont_inst:before
+{
+	font-family:icons;
+	content:"\f16d";
+}
+.fcont_trip:before {
+    font-family: icons;
+    content: "\f262";
+}
+.fcont_bullet:before
+{
+	font-family:icons;
+	content:"\f111";
+}
+.fcont_menu:before
+{
+	font-family:icons;
+	content:"\f0c9";
+}
+.fcont_youtube:before
+{
+	font-family:icons;
+	content:"\f16a";
+}
+.fcont_whatsapp:before
+{
+	font-family:icons;
+    content: "\f232";
+}
+/*---------------------------------*/
+/*Controles*/
+/*---------------------------------*/
+.btngen_1:hover
+{
+	background-color:rgba(54,18,21,.8);
+	color:rgba(255,255,255,1);
+	
+}	
+.dtxbox
+{
+	box-sizing: border-box;
+	padding:10px 5px;
+	outline:none;
+	font-size:16px;
+	border:none;
+	border-bottom: rgba(54,18,21,0) solid 1px;
+	color:rgba(104,59,17,1);
+	font-family:btittle;
+}
+.dtxbox:focus
+{
+	box-sizing: border-box;
+	border-bottom: rgba(54,18,21,1) solid 1px;
+}
+/*---------------------------------*/
+/*Animacion*/
+/*---------------------------------*/
+.shivana_rotate {
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: rotate;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+	/*-------------*/
+    animation-name: rotate;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes rotate {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes rotate {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+/*-----------------------------*/
+/*Capa menu mobil oculto*/
+.dmenuh
+{
+	display: none;
+}
+/*----------------------------------*/

@@ -1,0 +1,351 @@
+// JavaScript Document Shivana
+//============================================================================
+//Funcion scroll página nav
+window.onscroll = function() {
+	ScrollM();
+};
+function ScrollM(){
+	var dCab = document.getElementById("dHeader");
+	var logos = document.getElementById("logo");
+	var logos2 = document.getElementById("logo2");
+	if(document.body.scrollTop > 70 || document.documentElement.scrollTop > 70){
+		dCab.className= "dCabe bgcol_1 dsition_1";
+		logos.src = "images/Shivana-nav-1.png";
+		logos2.src = "images/Shivana-nav-1.png";
+	} else {
+		dCab.className= "dCabe bgcol_1_1 dsition_1";
+		logos.src = "images/Shivana-nav-2.png";
+		logos2.src = "images/Shivana-nav-2.png";
+	}
+}
+//==========================================================================
+//Funcion rotación de banner
+var ire = 1;
+var irem = 1;
+var iant = irem;
+var tre;
+function Rot_Banner(imax)
+{
+	irem = imax;
+	//console.log("variable imax:" + imax);
+	tre = setInterval(function(){
+		ire++;
+		if(ire == parseInt(irem) + 1 || parseInt(ire) == 1){
+			ire = 1;
+			iant = irem;
+		} else {
+			iant = ire - 1; 			
+		}
+		var drevr = document.getElementById('drev_' + ire);
+		var srevr = document.getElementById('sbul_' + ire);
+		var dreva = document.getElementById('drev_' + iant);
+		var sreva = document.getElementById('sbul_' + iant);
+		drevr.style.zIndex = '10';
+		drevr.style.left = '0px';
+		srevr.style.color = 'rgba(54,18,21,1)';
+		dreva.style.left = '-100%';
+		sreva.style.color = '';
+		setTimeout(function(){
+			dreva.style.zIndex = '-1';
+			dreva.style.left = '100%';
+		}, 2000); 
+	}, 8000);
+}
+//==========================================================================
+//Funcion clic bullet
+function Clic_Bullet(dobj)
+{
+	var isel = dobj.dataset.enum;
+	clearInterval(tre);
+	iant = ire;
+	ire = parseInt(isel);
+	var drevr = document.getElementById('drev_' + ire);
+	var srevr = document.getElementById('sbul_' + ire);
+	var dreva = document.getElementById('drev_' + iant);
+	var sreva = document.getElementById('sbul_' + iant);
+	drevr.style.zIndex = '10';
+	drevr.style.left = '0px';
+	srevr.style.color = 'rgba(54,18,21,1)';
+	dreva.style.left = '-100%';
+	sreva.style.color = '';
+	setTimeout(function(){
+		dreva.style.zIndex = '-1';
+		dreva.style.left = '100%';
+		Rot_Banner(irem);
+	},1000);
+}
+//=========================================================================
+//Funcion general para consultar y retornar valor
+function GenConret(sfile, sfunc, sparam, sasinc)
+{
+	//Muestra esperando
+	var funval = '';
+	var request = null;
+	if(window.XMLHttpRequest){
+		request = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		request = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	if (request) {
+		request.open("GET", sfile + ".php?sFun=" + sfunc + "&sparam=" + sparam, sasinc);
+		request.onreadystatechange = function(){
+			if (request.readyState == 4 && request.status == 200) {
+				var txms = request.responseText;
+				//Muestra la cantidad de usuarios conectados
+				funval = txms;
+			}
+		 }
+	request.send(null); //esta es la linea para que termine de ejecutar ajax
+	} else {
+		alert("¡Debe actualizar su navegador para ejecutar algunas funciones!");	
+	}
+	return funval;
+}
+//========================================================================
+//Funcion para poner contenido en control
+function InnerCtr(sCtr, sCont)
+{
+	var dcap = document.getElementById(sCtr);
+	dcap.innerHTML = sCont;
+}
+function hidcap(sdiv)
+{
+	var dobj = document.getElementById(sdiv);
+	dobj.style.visibility = 'hidden';
+}
+function viscap(sdiv)
+{
+	var dobj = document.getElementById(sdiv);
+	dobj.style.visibility = 'visible';
+}
+//===========================================================================
+//Funcion captura de eventos
+function Reg_Event(dobj)
+{
+	var sevent = dobj.dataset.event;
+	var ssection = dobj.dataset.section;
+	var dval = GenConret('ajax/General', 'Reg_Event', sevent + "|" + ssection, false);
+}
+//Funcion captura de eventos
+function Reg_Event_2(sevent, ssection)
+{
+	var dval = GenConret('ajax/General', 'Reg_Event', sevent + "|" + ssection, false);
+}
+//========================================================================
+//Funcion para registro por correo electrónico
+function Send_Email_Cont(ssection)
+{
+	hidcap('dRegAlertC');
+	InnerCtr('dRegAlertC_1', '');
+	var semail = document.getElementById('txcoEmail');
+	var sname = document.getElementById('txcoName');
+	var sphone = document.getElementById('txcoPhone');
+	// var sDate = document.getElementById('txcoDate');
+	var sCont = document.getElementById('cbCont');
+	var stext = document.getElementById('txcoMsj');
+	var sSave = document.getElementById('slSi');
+	var svali = '';	
+	var smsj = '';
+	//------------------------------------
+	semail.style.border = '';
+	sphone.style.border = '';
+	sname.style.border = '';
+	sCont.style.border = '';
+	// sDate.style.border = '';
+	stext.style.border = '';
+	//Valida campos obligatorios
+	if(sname.value == ''){
+		svali = 'No';		
+		sname.style.borderBottom = 'rgba(255,0,0,1) solid 1px';
+		smsj = smsj + '<li>Por favor ingresa tu nombre.</li>';
+	}
+	if(semail.value == ''){
+		svali = 'No';		
+		semail.style.borderBottom = 'rgba(255,0,0,1) solid 1px';
+		smsj = smsj + '<li>Por favor ingresa tu correo electrónico.</li>';
+	}
+	if(sphone.value == ''){
+		svali = 'No';		
+		sphone.style.borderBottom = 'rgba(255,0,0,1) solid 1px';
+		smsj = smsj + '<li>Por favor ingresa tu teléfono</li>';
+	}
+	if(sCont.value == ''){
+		svali = 'No';		
+		sCont.style.borderBottom = 'rgba(255,0,0,1) solid 1px';
+		smsj = smsj + '<li>Por favor selecciona por donde podemos contactarte</li>';
+	}
+	if(stext.value == ''){
+		svali = 'No';		
+		stext.style.borderBottom = 'rgba(255,0,0,1) solid 1px';
+		smsj = smsj + '<li>Escríbenos un comentario para tu reserva</li>';
+	}
+	//-----------------------------------------------------
+	if(svali != ''){
+		viscap('dRegAlertC');
+		smsj = 'Por favor verifica tu información:<ul>' + smsj + '</ul>';
+		InnerCtr('dRegAlertC_1', smsj);
+		setTimeout(function(){
+			semail.style.borderBottom = '';
+			sphone.style.borderBottom = '';
+			sname.style.borderBottom = '';
+			sCont.style.borderBottom = '';
+			// sDate.style.borderBottom = '';
+			stext.style.borderBottom = '';
+			hidcap('dRegAlertC');
+		}, 7000);
+		return false;
+	}
+	//--------------------------------------
+	//Muestra pensando
+	viscap('dWait-Con');
+	//--------------------------------------
+	//Envío de mensaje
+	setTimeout(function(){
+		var iresl = GenConret('ajax/General', 'SendCorr', sname.value + '|' + sphone.value + '|' + semail.value + '|' + sCont.value + '|' + stext.value + '|' + sSave.value , false);
+		Reg_Event_2('Contacto', ssection);
+		hidcap('dWait-Con');
+		viscap('dRegSucC');
+		setTimeout(function(){
+			hidcap('dRegSucC');
+		}, 7000);
+	}, 1000);
+}
+function entsend_Send_Email_Cont(txr, e, ssection) {
+	var code = e.keyCode;
+	if (code == 13) {
+		Send_Email_Cont(ssection);	
+	}
+}
+//===========================================================================================
+//Scroll de la página contácto y anclas 
+igoto = 0;
+var pubPos = 0;
+function scrollTo(to, duration, iposh) {
+	pubPos = 0;
+	if ((document.body.scrollTop >= to) && (document.documentElement.scrollTop >= to)) {return false;}
+    var diff = to - document.documentElement.scrollTop;
+	var diff1 = to - document.body.scrollTop;
+    var scrollStep = Math.PI / (duration / 10);
+    var count = 0, currPos, currPos1;
+    var start = document.documentElement.scrollTop;
+    var start1 = document.body.scrollTop;
+    scrollInterval = setInterval(function(){ 
+		count = count + 1;
+	    currPos = start + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
+		currPos1 = start1 + diff1 * (0.5 - 0.5 * Math.cos(count * scrollStep));
+	    document.documentElement.scrollTop = currPos;
+		document.body.scrollTop = currPos1;
+	    if(Math.abs(to - currPos1) < 10 && Math.abs(to - currPos) < 10){clearTimeout(scrollInterval);}
+    },10);
+}
+function test(elID)
+{
+    var dest = document.getElementById(elID);
+	//---------------------------------------
+	//Primero evalua el alto de pantalla
+	var sh = document.body.scrollHeight;
+	//--------------------------------------
+	igoto = dest.offsetTop;
+	var poshdif = sh - igoto;
+	scrollTo(igoto - 80, 600, poshdif);
+}
+//======================================================
+//Funcion para mostrar y ocultar menu responsive
+function MnResp(smen)
+{
+	var menu = document.getElementById(smen);
+	//----------------------------------------------
+	if(menu.style.width == '0%'){
+		menu.style.height = 'auto';
+		menu.style.width = '100%';		
+	} else {
+		menu.style.width = '0%';		
+		menu.style.height = '0px';
+	}
+}
+function CloseMen(smen)
+{
+	var menu = document.getElementById(smen);
+	//----------------------------------------------
+	menu.style.width = '0%';		
+	menu.style.height = '0px';
+}
+//=====================================================
+//Función suscripcion newsletter
+function Send_Email_News(ssection)
+{
+	hidcap('dRegAlertN');
+	InnerCtr('dRegAlertN_1', '');
+	var semail = document.getElementById('txnwEmail');
+	var sname = document.getElementById('txnwName');
+	var sSave = document.getElementById('nwSi');
+	var svali = '';	
+	var smsj = '';
+	//------------------------------------
+	// Obtiene la clase actual del control
+	snameC = sname.getAttribute('class');
+	semailC = semail.getAttribute('class');
+	//Valida campos obligatorios
+	if(sname.value == '' && window.getComputedStyle(sname, null).getPropertyValue("display") != 'none'){
+		svali = 'No';		
+		sname.className += " "+snameC+"-vacio";
+		//smsj = smsj + '<li>'+msj[1]+'</li>';
+		smsj = smsj + '<li>Por favor ingresa tu nombre</li>';
+	}
+	if(semail.value == '' && window.getComputedStyle(semail, null).getPropertyValue("display") != 'none'){
+		svali = 'No';		
+		semail.className += " "+semailC+"-vacio";
+		//smsj = smsj + '<li>'+msj[2]+'</li>';
+		smsj = smsj + '<li>Por favor ingresa tu e-mail.</li>';
+	}
+	//-----------------------------------------------------
+	if(svali != ''){
+		viscap('dRegAlertN');
+		//smsj = msj[0]+'<ul>' + smsj + '</ul>';
+		smsj = 'Por favor verifica tu información.<ul>' + smsj + '</ul>';
+		InnerCtr('dRegAlertN_1', smsj);
+		setTimeout(function(){
+			sname.className = snameC;
+			semail.className = semailC;
+			hidcap('dRegAlertN');
+		}, 7000);
+		return false;
+	}
+	//--------------------------------------
+	//Muestra pensando
+	viscap('dWait-News');
+	//--------------------------------------
+	//Envío de mensaje
+	var request = null;
+	if(window.XMLHttpRequest){
+		request = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		request = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	if (request) {
+		//request.open("GET", "General.php?sFun=" + sfunc + "&sparam=" + sparam, sasinc);
+		request.open("GET", "ajax/General.php?sFun=SuscribeN&sparam=" + sname.value + '|' + semail.value, true);
+		request.onreadystatechange = function(){
+			if (request.readyState == 4 && request.status == 200) {
+				var txms = request.responseText;
+				//Reg_Event_2('Contacto', ssection, 'Contacto');
+				Reg_Event_2('Newsletter', ssection);
+				InnerCtr('dRegSucN_1', txms);
+				hidcap('dWait-News');
+				viscap('dRegSucN');
+				setTimeout(function(){
+					hidcap('dRegSucN');
+				}, 7000);
+			}
+		 }
+	request.send(null); //esta es la linea para que termine de ejecutar ajax
+	} else {
+		alert("¡Debe actualizar su navegador para ejecutar algunas funciones!");	
+	}
+}
+function entsend_Send_Email_News(txr, e, ssection) {
+	var code = e.keyCode;
+	if (code == 13) {
+		Send_Email_News(ssection);	
+	}
+}

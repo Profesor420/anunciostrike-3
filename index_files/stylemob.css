@@ -1,0 +1,260 @@
+/*============================================================*/
+/* Estilos Shivana --> Responsive*/
+/*============================================================*/
+/*display*/
+/*============================================================*/
+.dmenur
+{
+	display: block !important;
+	margin: 10px 15px 0px 0px;
+}
+.dhid
+{
+	display:none !important;
+}
+.dvis {
+    display: block !important;
+}
+/*============================================================*/
+/*width*/
+/*============================================================*/
+.w300p
+{
+	width: 300px !important;
+}
+.w280p
+{
+	width: 280px !important;
+}
+.w40p
+{
+	width: 40px !important;
+}
+.w100
+{
+	width:100% !important;
+}
+.w90
+{
+	width:90% !important;
+}
+.w50
+{
+	width:50% !important;
+}
+.w25
+{
+	width:25% !important;
+}
+.wauto
+{
+	width: auto !important;
+}
+/*============================================================*/
+/*height*/
+/*============================================================*/
+.h280p
+{
+	height: 280px !important;
+}
+.h40p
+{
+	height: 40px !important;
+}
+.h25p
+{
+	height: 25px !important;
+}
+.h50
+{
+	height: 50% !important;
+}
+.hauto
+{
+	height: auto !important;
+}
+/*============================================================*/
+/*Padding*/
+/*============================================================*/
+.mpad_30
+{
+	padding:30px 0 !important;
+}
+.mpad_20
+{
+	padding:20px 0 !important;
+}
+.mpad_10
+{
+	padding:10px 0 !important;
+}
+.mpad_0
+{
+	padding: 0px !important;
+}
+.mpad_15_40{
+	padding: 15px 0px 40px 0px !important;
+}
+/*============================================================*/
+/*Margin*/
+/*============================================================*/
+.mtop_60
+{
+	margin-top:60px !important;
+}
+.mtop_20
+{
+	margin-top:20px !important;
+}
+.mtop_18
+{
+	margin-top:18px !important;
+}
+.mtop_10
+{
+	margin-top:10px !important;
+}
+.mtop_0
+{
+	margin-top:0px !important;
+}
+.mleft_10n
+{
+	margin-left: -10px !important;
+}
+.mright_5
+{
+	margin-right: 5px !important;
+}
+.m90_auto
+{
+	margin:90px auto 0px auto !important;
+}
+.m20_auto
+{
+	margin:20px auto 0px auto !important;
+}
+.m0_auto
+{
+	margin:0 auto !important;
+}
+/*============================================================*/
+/*Top,Bottom,Left,Right*/
+/*============================================================*/
+.t45
+{
+	top:45% !important;
+}
+.t25
+{
+	top:25% !important;
+}
+.t8
+{
+	top: 8% !important;
+}
+.r10
+{
+	right: 10% !important;
+}
+.r0
+{
+	right: 0 !important;
+}
+.l59
+{
+	left: 59% !important;
+}
+.l10
+{
+	left: 10% !important;
+}
+.l0
+{
+	left: 0 !important;
+}
+/*============================================================*/
+/*Position*/
+/*============================================================*/
+.flt_1m
+{
+	float: left !important;
+}
+.flt_n
+{
+	float:none !important;
+}
+/*============================================================*/
+/*Texto*/
+/*============================================================*/
+.f31
+{
+	font-size: 31px !important;
+}
+.f27
+{
+	font-size: 27px !important;
+}
+.f25
+{
+	font-size: 25px !important;
+}
+.f21
+{
+	font-size: 21px !important;
+}
+.f19
+{
+	font-size: 19px !important;
+}
+.f17
+{
+	font-size: 17px !important;
+}
+.f15
+{
+	font-size: 15px !important;
+}
+.f13
+{
+	font-size: 13px !important;
+}
+.txacenter
+{
+	text-align: center !important;
+}
+.lineh_05
+{
+	line-height: .5em !important;
+}
+.lineh_037
+{
+	line-height: .37em !important;
+}
+.lineh_03
+{
+	line-height: .3em !important;
+}
+/*==============================================================*/
+/*Especifico*/
+/*==============================================================*/
+.letterSpa
+{
+	letter-spacing: .2em !important;
+}
+.portrait
+{
+	width: auto !important;
+	height: 100% !important;
+}
+.findme_logo{
+	height: 25px !important;
+    top: 23px !important;
+    margin: 0px auto !important;
+    right: 20% !important;
+    left: 20% !important;
+}
+.chat .chat-contenedor{
+	bottom: 5px !important;
+    right: 5px !important;
+}

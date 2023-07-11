@@ -1,0 +1,108 @@
+/*======================================*/
+/*Newsletter*/
+/*======================================*/
+.newsletter{
+	background-color:rgba(104,59,17,1);
+}
+	.newsletter .contacto-capa{}
+	.newsletter .newsletter-pestana{}
+		.newsletter .newsletter-pestana .newsletter-pestana-titulo{}
+		.newsletter .newsletter-pestana .newsletter-pestana-titulo-cl{}
+		.newsletter .newsletter-pestana .newsletter-pestana-icono{}
+		.newsletter .newsletter-pestana .newsletter-pestana-icono-cl{}
+	.newsletter .newsletter-pestana-cl{}
+	.newsletter .newsletter-titulo{
+		font-family: btittle;
+		color:rgba(255,255,255,1);
+		font-size:25px;
+		line-height:1.8em;
+	}
+	.newsletter .newsletter-introduccion{
+		font-family: rtittle;
+		color:rgba(255,255,255,1);
+		font-size:21px;
+		line-height:1.5em;
+	}
+	.newsletter .newsletter-introduccion-cl{}
+	.newsletter .newsletter-form{}
+		.newsletter .newsletter-form .newsletter-contenedor{}
+				.newsletter .newsletter-form .newsletter-contenedor .newsletter-alerta{
+					background-color:rgba(255,255,255,0.95);
+					border: solid 2px rgba(238,227,197,0.95);
+				}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-alerta .newsletter-cerrar{
+						font-size:17px;
+						color:rgba(104,59,17,1);
+						text-align:right;
+						font-family:btittle;
+					}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-alerta .newsletter-cerrar:hover{}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-alerta .newsletter-mensaje-error{
+						font-size:17px;
+						color:rgba(104,59,17,1);
+						text-align:left;
+						font-family:rtittle;
+					}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-campo{
+						font-size:17px;
+						color:rgba(104,59,17,1);
+						border:none;
+						font-family:btittle;
+						background-color: rgba(238,227,197,.8);
+						border: 1px solid rgba(255,0,0,0);
+					}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-campo-vacio{
+						border: 1px solid rgba(255,0,0,1)!important;
+					}
+					/*Clases específicas para cada control*/
+					.newsletter .newsletter-form .newsletter-contenedor #txnwName{}
+					.newsletter .newsletter-form .newsletter-contenedor #txnwEmail{}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-campo::-webkit-input-placeholder{ /* Chrome/Opera/Safari */ 
+						color:rgba(104,59,17,0.5);
+					}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-campo::-moz-placeholder{ /* Firefox 19+ */ 
+						color:rgba(104,59,17,0.5);
+					}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-campo:-ms-input-placeholder{ /* IE 10+ */ 
+						color:rgba(104,59,17,0.5);
+					}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-campo:-moz-placeholder{ /* Firefox 18- */ 
+						color:rgba(104,59,17,0.5);
+					}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-campo:focus{}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-notificaciones{}
+					.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje{}
+						.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje .newsletter-boton{
+							font-size:17px;
+							color:rgba(104,59,17,1);
+							border:none;
+							font-family:btittle;
+							background-color: rgba(238,227,197,.8);
+							border: rgba(238,227,197,0) solid 2px;
+						}					
+						.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje .newsletter-boton:hover{
+							color:rgba(255,255,255,1);
+							background-color: rgba(238,227,197,0);
+							border: rgba(238,227,197,1) solid 2px;
+						}
+						.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje .newsletter-boton-cl{}
+						.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje img{}
+						.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje .newsletter-mensaje-news{
+							background-color:rgba(255,255,255,0.95);
+							border: solid 2px rgba(238,227,197,0.95);
+						}					
+							.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje .newsletter-mensaje-news .newsletter-mensaje-cerrar{
+								font-size:17px;
+								color:rgba(104,59,17,1);
+								text-align:right;
+								font-family:btittle;
+							}
+							.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje .newsletter-mensaje-news .newsletter-mensaje-cerrar:hover{}
+							.newsletter .newsletter-form .newsletter-contenedor .newsletter-mensaje .newsletter-mensaje-news .newsletter-mensaje-contenido{
+								font-size:17px;
+								color:rgba(104,59,17,1);
+								text-align:left;
+								font-family:rtittle;
+							}
+	.newsletter .newsletter-form-cl{}
+

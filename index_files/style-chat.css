@@ -1,0 +1,51 @@
+/*======================================*/
+/*Include Chat*/
+/*======================================*/
+.chat{}
+	.chat .chat-capa{}
+	.chat .chat-contenedor{
+	    bottom: 20px;
+	    box-sizing: border-box;
+	    position: fixed;
+	    right: 30px;
+	    transition: all 1s ease-in-out 0s;
+	    z-index: 40;
+	    background-color: rgba(255,255,255,1);
+	    border: 1px solid rgba(230,91,37,.3);
+	    border-radius: 30px;
+	    box-shadow: 2px 3px 9px rgba(121,121,121,1);
+	    color: rgba(113,103,103,1);
+	}
+		.chat .chat-contenedor a{}
+			.chat .chat-contenedor a .chat-icon{
+			    box-sizing: border-box;
+			    display: inline-block;
+			    padding: 10px;
+			    transition: all .6s ease-in-out 0s;
+			    background-color: rgba(37,211,102,1);
+		        border-radius: 30px 0 0 30px;
+			    color: rgba(255,255,255,1);
+			    font-size: 1.8em;
+			    line-height: 1em;
+			    text-align: center;
+			}
+			.chat .chat-contenedor a .chat-icon:hover{
+				color: rgb(18,140,126,1);
+			}
+			.chat .chat-contenedor a .chat-title{
+			    box-sizing: border-box;
+			    display: inline-block;
+			    padding: 10px;
+			    vertical-align: super;
+			    transition: all .6s ease-in-out 0s;
+				background-color:rgba(1,74,68,0);
+				border-radius: 0 10px 0 0;
+				color:rgba(61,61,61,1);
+   			    font-family: 'title',helvetica,verdana,sans-serif;
+			    font-size: .95em;
+    			text-align: center;
+    			font-weight: bold;
+			}
+			.chat .chat-contenedor a .chat-title:hover{
+				color: rgba(65,188,211,1);			
+			}
